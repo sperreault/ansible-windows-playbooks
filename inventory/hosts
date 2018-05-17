@@ -1,0 +1,9 @@
+[all]
+windows ansible_host=192.168.33.50
+
+[all:vars]
+ansible_user="ansible"
+ansible_password="Password1!"
+ansible_port=5985
+ansible_connection=winrm
+ansible_winrm_transport=basic 

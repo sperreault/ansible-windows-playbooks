@@ -1,0 +1,13 @@
+---
+  - hosts: windows  
+    name: Install the IIS web service
+    tasks:
+      - name: Install IIS
+        win_feature:
+          name: Web-Server
+          state: present
+
+      - name: Start IIS Service
+        win_service:
+          name: W3Svc
+          state: started
